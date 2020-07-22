@@ -1,0 +1,23 @@
+
+void setup()
+{
+ Serial.begin(9600);
+  pinMode(5,OUTPUT);
+  
+  
+
+}
+
+void loop()
+{
+  int r=analogRead(A0);
+  int y=map(r,0,1023,0,100);
+  if(y<100)
+  {
+    Serial.println("less than 100");
+  }
+  else
+{
+ Serial.println(y);
+}
+}
